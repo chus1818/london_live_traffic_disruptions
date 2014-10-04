@@ -1,7 +1,3 @@
-require_dependency './ltd_worker_related/presenters/ltd_data'
-require_dependency './ltd_worker_related/presenters/ltd_data_related/ltd_element'
-require_dependency './ltd_worker_related/fetchers/patron_fetcher'
-
 class LtdWorker
   include ClassConfigurable
   include Sidekiq::Worker
@@ -17,7 +13,7 @@ class LtdWorker
 
   def store(attrs)
     storage.transaction do
-      storage.create_with(attrs).find_or_create_by ltd_id: attrs[:ltd_id]
+      storage.find_or_initialize_by(ltd_id: attrs[:ltd_id]).update_attributes attrs
     end
   end
 

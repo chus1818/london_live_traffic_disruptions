@@ -9,10 +9,14 @@ class LtdData
   end
 
   def elements
-    @elements ||= raw_elements.map { |raw_elm| LtdElement.new raw_elm.to_s } 
+    @elements ||= raw_elements.map { |raw_elm| element_class.new raw_elm.to_s } 
   end
 
 private
+
+  def element_class
+    LtdElement
+  end
 
   def raw_elements
     @raw_elements ||= schema.xpath disruption_xpath
@@ -22,3 +26,5 @@ private
     '//xmlns:Disruptions//xmlns:Disruption'
   end
 end
+
+require_dependency './ltd_data_related/ltd_element'

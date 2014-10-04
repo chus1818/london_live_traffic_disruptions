@@ -16,9 +16,7 @@ class LtdData::LtdElement
 private
 
   def build_hash
-    Hash.from_xml(raw)["Disruption"].inject ({}) do |sum, (key, value)|
-      sum.merge key.underscore => value
-    end
+    Hash.from_xml(raw).normalize[:disruption]
   end
 
   def build_formatted_hash

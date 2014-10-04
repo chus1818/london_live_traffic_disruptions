@@ -3,10 +3,19 @@
 <head>
   <title>QuiqupTest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= yield :extra_header_tags %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class='navbar navbar-inverse navbar-fixed-top'>
+  <div class='external-container'>
+    <div class='navbar-header'>
+      <a href='http://quiqup.com/' class='navbar-brand'>Quiqup</a>
+    </div>
+  </div>
+</div>
 
 <%= yield %>
 
