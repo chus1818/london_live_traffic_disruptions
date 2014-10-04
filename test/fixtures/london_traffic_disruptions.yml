@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ltd_id: 1
+  status: MyString
+  severity: MyString
+  level_of_interest: MyString
+  category: MyString
+  sub_category: MyString
+  start_time: 2014-10-04 17:18:51
+  location: MyString
+  corridor: MyString
+  comments: MyText
+  current_update: MyText
+  remark_time: 2014-10-04 17:18:51
+  last_mod_time: 2014-10-04 17:18:51
+  course_area: MyText
+
+two:
+  ltd_id: 1
+  status: MyString
+  severity: MyString
+  level_of_interest: MyString
+  category: MyString
+  sub_category: MyString
+  start_time: 2014-10-04 17:18:51
+  location: MyString
+  corridor: MyString
+  comments: MyText
+  current_update: MyText
+  remark_time: 2014-10-04 17:18:51
+  last_mod_time: 2014-10-04 17:18:51
+  course_area: MyText
