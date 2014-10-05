@@ -29,7 +29,11 @@ gem 'slim'
 
 gem 'gmaps4rails'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
   #gem 'spring'
   gem 'pry-rails'
 end
+
+ruby "2.1.1"

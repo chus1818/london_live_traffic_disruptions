@@ -8,7 +8,7 @@ class LtdWorker
   end
 
   def perform
-    data.each { |elm| store elm.to_hash}
+    data.each { |elm| store elm.to_hash }
   end
 
   def store(attrs)
